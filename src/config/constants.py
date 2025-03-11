@@ -4,7 +4,7 @@ import os
 SCREENSHOT_DIR = os.getenv("SCREENSHOT_DIR", "screenshots")
 LOG_DIR = os.getenv("LOG_DIR", "logs")
 ALLURE_DIR = os.getenv("ALLURE_DIR", "allure-results")
-TEST_RESOURCES_DIR = os.getenv("TEST_RESOURCES_DIR", "resources")
+TEST_RESOURCES_DIR = os.getenv("TEST_RESOURCES_DIR", "tests/resources")
 
 # Appium settings
 APPIUM_HOST = os.getenv("APPIUM_HOST", "127.0.0.1")  # Use localhost

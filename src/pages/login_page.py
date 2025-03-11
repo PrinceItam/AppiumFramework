@@ -73,6 +73,6 @@ class LoginPage(BasePage):
     @allure.step("Verify wrong credentials message is displayed")
     def verify_wrong_credentials_message_displayed(self):
         """Verifies that the wrong credentials message is displayed."""
-        is_displayed = self.is_displayed(self._wrong_credentials_message, "text")  # Assuming text; change to "id" if needed
+        is_displayed = self.is_displayed(self._wrong_credentials_message, "text")
         assert is_displayed, "Wrong credentials message is not displayed"
         self.log.info("Verified wrong credentials message is displayed")

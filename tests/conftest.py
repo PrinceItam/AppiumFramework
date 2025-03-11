@@ -27,7 +27,7 @@ def emulator_session():
         logger.info(f"Using existing emulator: {udid}")
         subprocess.run(['adb', '-s', udid, 'wait-for-device'], check=False)
     else:
-        avd_name = os.getenv("AVD_NAME", "Pixel_8_Pro_API_Baklava")
+        avd_name = os.getenv("AVD_NAME", "Emulator-5556")
         emulator_port = Driver.find_free_port(5554)
         logger.info(f"Starting emulator {avd_name} on port {emulator_port}")
         process = subprocess.Popen(

@@ -2,4 +2,7 @@ echo "__pycache__/
 *.pyc
 allure-results/
 allure-report/
+screenshots
+tests/screenshots
+tests/logs
 logs

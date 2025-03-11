@@ -4,6 +4,8 @@
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium.webdriver.appium_service import AppiumService
+
+from src.config.constants import TEST_RESOURCES_DIR, APK_PATH
 from src.utilities.custom_logger import CustomLogger
 import os
 import socket
@@ -21,10 +23,10 @@ class Driver:
         self.appium_port = self.find_free_port(appium_port_base)
         self.system_port = self.find_free_port(system_port_base)
         self.udid = udid
-        self.apk_path = os.getenv("APK_PATH", "/path/to/Android_Demo_app.apk")
+        self.apk_path = APK_PATH
         # Ensure capabilities are valid
-        self.apk_path = apk_path or os.getenv("APK_PATH",
-                                              "/Users/princeitam/Desktop/NewAppiumTestProject/tests/resources/Android_Demo_App.apk")
+       # self.apk_path = apk_path or os.getenv("APK_PATH",
+                                             # "/Users/princeitam/Desktop/NewAppiumTestProject/tests/resources/Android_Demo_App.apk")
         if not os.path.exists(self.apk_path):
             raise ValueError(f"APK path {self.apk_path} does not exist")
         self.capabilities = {
